@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIPY</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../../../../plugins/fontawesome-free/css/all.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../../dist/css/adminlte.min.css">
+  <!-- fullCalendar -->
+  <link rel="stylesheet" href="../../../../plugins/fullcalendar/main.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../../../../plugins/daterangepicker/daterangepicker.css">
+  <!-- Thêm css -->
+  <link rel="stylesheet" href="../../../../dist/css/new/style.css">
+</head>
+<!--
+`body` tag options:
+
+  Apply one or more of the following classes to to the body tag
+  to get the desired effect
+
+  * sidebar-collapse
+  * sidebar-mini
+-->
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index3.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fas fa-search"></i>
+          </a>
+          <div class="navbar-search-block">
+            <form class="form-inline">
+              <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
+
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="../../../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">Call me whenever you can...</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="../../../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    John Pierce
+                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">I got your message bro</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Nora Silvester
+                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">The subject goes here</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          </div>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 friend requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link">
+        <img src="../../../../dist/img/logotipyred.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light">Trung tâm TIPY</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../../../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Phan Thành Toại</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+            <li class="nav-item">
+              <a href="pages/widgets.html" class="nav-link active">
+                <i class="nav-icon fas fa-home"></i>
+                <p>
+                  Trang chủ
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Quản trị chung
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>
+                      Khóa học
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item ml-4">
+                      <a href="#" class="nav-link">
+                        <i class="far fa-dot-circle nav-icon"></i>
+                        <p>Danh mục</p>
+                      </a>
+                    </li>
+                    <li class="nav-item ml-4">
+                      <a href="#" class="nav-link">
+                        <i class="far fa-dot-circle nav-icon"></i>
+                        <p>Môn học</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Giáo viên</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Học sinh</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Lớp học</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-clipboard-list"></i>
+                <p>
+                  Quản lý học sinh
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Điểm danh</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Lịch sử học tập</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Main content -->
+      <section class="content mt-5">
+        <div class="container-fluid">
+
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-primary mt-3 mb-2" data-toggle="modal" data-target="#modal-lg">
+              Thêm mới
+            </button>
+          </div>
+
+          <!-- Model form  -->
+          <div class="modal fade" id="modal-lg">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <!-- Form bao quanh  -->
+                <form id="quickForm">
+                  <div class="modal-body">
+                    <!-- form start -->
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label for="hovaten">Họ và tên</label>
+                        <input type="text" name="hovaten" class="form-control" id="hovaten"
+                          placeholder="Ví dụ: Nguyễn Văn Anh">
+                      </div>
+                      <div class="form-group">
+                        <label for="">Giới tính</label>
+                        <div class="custom-control custom-radio">
+                          <input class="custom-control-input" type="radio" id="gioitinh_nam" name="gioitinh">
+                          <label for="gioitinh_nam" class="custom-control-label">Nam</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input class="custom-control-input" type="radio" id="gioitinh_nu" name="gioitinh">
+                          <label for="gioitinh_nu" class="custom-control-label">Nữ</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Ngày sinh</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                          </div>
+                          <input type="text" name="ngaysinh" class="form-control" data-inputmask-alias="datetime"
+                            data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                        </div>
+                        <!-- /.input group -->
+                      </div>
+                      <div class="form-group">
+                        <label>Số điện thoại</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                          </div>
+                          <input type="text" name="sodienthoai" class="form-control"
+                            data-inputmask="'mask': ['999 999 9999']" data-mask>
+                        </div>
+                        <!-- /.input group -->
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control" id="email"
+                          placeholder="Ví dụ: vidu@gmail.com">
+                      </div>
+                      <div class="form-group">
+                        <label for="diachi">Địa chỉ</label>
+                        <select name="tinhthanhpho" class="form-control mb-3" required="">
+                          <option value="">Tỉnh / Thành phố</option>
+                        </select>
+                        <select name="quanhuyen" class="form-control mb-3" required="">
+                          <option value="">Quận / Huyện</option>
+                        </select>
+                        <input class="billing_address_1" name="" type="hidden" value="">
+                        <input class="billing_address_2" name="" type="hidden" value="">
+                        <input type="email" name="phuongxa" class="form-control" id="phuongxa"
+                          placeholder="Ví dụ: Phường Bến Thủy ">
+                      </div>
+                      <div class="card">
+                        <div class="card-header d-flex p-0">
+                          <ul class="nav nav-pills p-2">
+                            <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">
+                                <input checked class="d-none" type="radio" name="phanloai" id="admin">
+                                <label class="mb-0" for="admin">Amin</label>
+                              </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab">
+                                <input class="d-none" type="radio" name="phanloai" id="giaovien">
+                                <label class="mb-0" for="giaovien">Giáo viên</label>
+                              </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#tab_3" data-toggle="tab">
+                                <input class="d-none" type="radio" name="phanloai" id="hocsinh">
+                                <label class="mb-0" for="hocsinh">Học sinh</label>
+                              </a></li>
+                          </ul>
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="tab_1">
+                              <i>Không có trường thông tin nào!</i>
+                            </div>
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="tab_2">
+                              <div class="form-group">
+                                <label>Trình độ</label>
+                                <select class="form-control select2bs4" style="width: 100%;">
+                                  <option>Cao đẳng</option>
+                                  <option selected="selected">Đại học</option>
+                                  <option>Thạc sĩ</option>
+                                  <option>Tiến sĩ</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <label for="donvicongtac">Đơn vị công tác</label>
+                                <input type="text" name="donvicongtac" class="form-control" id="donvicongtac"
+                                  placeholder="Ví dụ: Trường THPT Huỳnh Thúc Kháng">
+                              </div>
+                            </div>
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="tab_3">
+                              <div class="form-group">
+                                <label for="truong">Trường học</label>
+                                <input type="text" name="truong" class="form-control" id="truong"
+                                  placeholder="Ví dụ: Trường THCS Phan Bội Châu">
+                              </div>
+                              <div class="form-group">
+                                <label for="phuhuynh">Phụ huynh</label>
+                                <input type="text" name="phuhuynh" class="form-control" id="phuhuynh"
+                                  placeholder="Ví dụ: Lê văn Hải">
+                              </div>
+                            </div>
+                            <!-- /.tab-pane -->
+                          </div>
+                          <!-- /.tab-content -->
+                        </div><!-- /.card-body -->
+                      </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                  </div>
+                </form>
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+          </div>
+
+          <!-- Model thông báo xóa  -->
+          <div class="modal fade" id="modal-warning">
+            <div class="modal-dialog">
+              <div class="modal-content bg-warning">
+                <div class="modal-header">
+                  <h4 class="modal-title">Thông báo</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Dữ liệu sẽ bị xóa vĩnh viễn&hellip;</p>
+                  <p>Bạn có muốn tiếp tục?</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                  <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Đóng</button>
+                  <button type="button" class="btn btn-outline-dark">Tiếp tục</button>
+                </div>
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Bảng danh sách danh người dùng hệ thống</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th>Tài khoản</th>
+                    <th>Phân loại</th>
+                    <th>Ngày tạo</th>
+                    <th>Người tạo</th>
+                    <th>Hành động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Phan Thành Toại</td>
+                    <td>phanthanhtoai</td>
+                    <td>Admin</td>
+                    <td>22:10:43 17/09/2022</td>
+                    <td>Phan Thành Toại</td>
+                    <td>
+                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
+                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Nguyễn Thị Anh</td>
+                    <td>nguyenthianh</td>
+                    <td>Giáo viên</td>
+                    <td>21:10:43 17/08/2022</td>
+                    <td>Phan Thành Toại</td>
+                    <td>
+                      <i class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
+                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Lê Việt Hoàn</td>
+                    <td>leviethoan</td>
+                    <td>Học sinh</td>
+                    <td>20:10:43 16/08/2022</td>
+                    <td>Phan Thành Toại</td>
+                    <td>
+                      <i class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
+                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Trần Thành Trung</td>
+                    <td>tranthanhtrung</td>
+                    <td>Học sinh</td>
+                    <td>19:10:43 15/08/2022</td>
+                    <td>Phan Thành Toại</td>
+                    <td>
+                      <i class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
+                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer d-flex justify-content-center">
+      <strong>Copyright &copy; 2022 <a href="https://adminlte.io">TIPY TECH</a>.</strong>
+    </footer>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="../../../../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="../../../../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- AdminLTE -->
+  <script src="../../../../dist/js/adminlte.js"></script>
+  <!-- fullCalendar 2.2.5 -->
+  <script src="../../../../plugins/moment/moment.min.js"></script>
+  <script src="../../../../plugins/fullcalendar/main.js"></script>
+
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="../../../../plugins/chart.js/Chart.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../../../dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="../../../../dist/js/pages/dashboard3.js"></script>
+  <!-- Lịch -->
+  <script src="../../../../dist/js/new/lich.js"></script>
+  <!-- DataTables  & Plugins -->
+  <script src="../../../../plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="../../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="../../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="../../../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../../../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../../../../plugins/jszip/jszip.min.js"></script>
+  <script src="../../../../plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="../../../../plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="../../../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="../../../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="../../../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <!-- jquery-validation -->
+  <script src="../../../../plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="../../../../plugins/jquery-validation/additional-methods.min.js"></script>
+  <!-- InputMask -->
+  <script src="../../../../plugins/moment/moment.min.js"></script>
+  <script src="../../../../plugins/inputmask/jquery.inputmask.min.js"></script>
+  <!-- thư viện tỉnh thành huyện  -->
+  <script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+  <script>
+    //<![CDATA[
+    if (address_2 = localStorage.getItem('address_2_saved')) {
+      $('select[name="quanhuyen"] option').each(function () {
+        if ($(this).text() == address_2) {
+          $(this).attr('selected', '')
+        }
+      })
+      $('input.billing_address_2').attr('value', address_2)
+    }
+    if (district = localStorage.getItem('district')) {
+      $('select[name="quanhuyen"]').html(district)
+      $('select[name="quanhuyen"]').on('change', function () {
+        var target = $(this).children('option:selected')
+        target.attr('selected', '')
+        $('select[name="quanhuyen"] option').not(target).removeAttr('selected')
+        address_2 = target.text()
+        $('input.billing_address_2').attr('value', address_2)
+        district = $('select[name="quanhuyen"]').html()
+        localStorage.setItem('district', district)
+        localStorage.setItem('address_2_saved', address_2)
+      })
+    }
+    $('select[name="tinhthanhpho"]').each(function () {
+      var $this = $(this),
+        stc = ''
+      c.forEach(function (i, e) {
+        e += +1
+        stc += '<option value=' + e + '>' + i + '</option>'
+        $this.html('<option value="">Tỉnh / Thành phố</option>' + stc)
+        if (address_1 = localStorage.getItem('address_1_saved')) {
+          $('select[name="tinhthanhpho"] option').each(function () {
+            if ($(this).text() == address_1) {
+              $(this).attr('selected', '')
+            }
+          })
+          $('input.billing_address_1').attr('value', address_1)
+        }
+        $this.on('change', function (i) {
+          i = $this.children('option:selected').index() - 1
+          var str = '',
+            r = $this.val()
+          if (r != '') {
+            arr[i].forEach(function (el) {
+              str += '<option value="' + el + '">' + el + '</option>'
+              $('select[name="quanhuyen"]').html('<option value="">Quận / Huyện</option>' +
+                str)
+            })
+            var address_1 = $this.children('option:selected').text()
+            var district = $('select[name="quanhuyen"]').html()
+            localStorage.setItem('address_1_saved', address_1)
+            localStorage.setItem('district', district)
+            $('select[name="quanhuyen"]').on('change', function () {
+              var target = $(this).children('option:selected')
+              target.attr('selected', '')
+              $('select[name="quanhuyen"] option').not(target).removeAttr('selected')
+              var address_2 = target.text()
+              $('input.billing_address_2').attr('value', address_2)
+              district = $('select[name="quanhuyen"]').html()
+              localStorage.setItem('district', district)
+              localStorage.setItem('address_2_saved', address_2)
+            })
+          } else {
+            $('select[name="quanhuyen"]').html('<option value="">Quận / Huyện</option>')
+            district = $('select[name="quanhuyen"]').html()
+            localStorage.setItem('district', district)
+            localStorage.removeItem('address_1_saved', address_1)
+          }
+        })
+      })
+    })
+    //]]>
+  </script>
+  <!-- Page specific script -->
+  <script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+
+      $.validator.setDefaults({
+        submitHandler: function () {
+          alert("Form successful submitted!");
+        }
+      });
+
+      $('#quickForm').validate({
+        rules: {
+          hovaten: {
+            required: true,
+          },
+          gioitinh: {
+            required: true,
+          },
+          ngaysinh: {
+            required: true,
+          },
+          sodienthoai: {
+            required: true,
+            number: true,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+          phuongxa: {
+            required: true,
+          },
+          donvicongtac: {
+            required: true,
+          },
+          truong: {
+            required: true,
+          },
+          phuhuynh: {
+            required: true,
+          },
+        },
+        messages: {
+          hovaten: {
+            required: "Vui lòng không bỏ trống",
+          },
+          gioitinh: {
+            required: "Vui lòng không bỏ trống",
+          },
+          ngaysinh: {
+            required: "Vui lòng không bỏ trống",
+          },
+          sodienthoai: {
+            required: "Vui lòng không bỏ trống",
+            number: "Vui lòng nhập số điện thoại",
+          },
+          email: {
+            required: "Vui lòng không bỏ trống",
+            email: "Vui lòng nhập đúng định dạng email",
+          },
+          phuongxa: {
+            required: "Vui lòng không bỏ trống",
+          },
+          donvicongtac: {
+            required: "Vui lòng không bỏ trống",
+          },
+          truong: {
+            required: "Vui lòng không bỏ trống",
+          },
+          phuhuynh: {
+            required: "Vui lòng không bỏ trống",
+          },
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.form-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+
+      //date-mask
+      $('[data-mask]').inputmask()
+    });
+
+  </script>
+</body>
+
+</html>
