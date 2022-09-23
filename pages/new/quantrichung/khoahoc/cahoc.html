@@ -21,18 +21,8 @@
   <link rel="stylesheet" href="../../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="../../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="../../../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="../../../../plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="../../../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-  <!-- daterange picker -->
-  <link rel="stylesheet" href="../../../../plugins/daterangepicker/daterangepicker.css">
-  <!-- date picker  -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css"
-    integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg=="
-    crossorigin="anonymous" />
-  <!-- Bootstrap4 Duallistbox -->
-  <link rel="stylesheet" href="../../../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+  <!-- thời gian  -->
+  <link href="../../../../plugins/timeselect/timepicker.min.css" rel="stylesheet" />
   <!-- Thêm css -->
   <link rel="stylesheet" href="../../../../dist/css/new/style.css">
 </head>
@@ -333,98 +323,19 @@
                     <!-- form start -->
                     <div class="card-body">
                       <div class="form-group">
-                        <label for="tenlophoc">Tên lớp học</label>
-                        <input type="text" name="tenlophoc" class="form-control" id="tenlophoc"
-                          placeholder="Ví dụ: Lập trình C++ cơ bản">
+                        <label for="cahoc">Ca học</label>
+                        <input type="text" name="cahoc" class="form-control" id="cahoc" placeholder="Ví dụ: Ca 1...">
                       </div>
                       <div class="form-group">
-                        <label>Danh mục</label>
-                        <select id="danhmuc" name="danhmuc" class="form-control">
-                          <option value="default">Chọn</option>
-                          <option>Lập trình</option>
-                          <option>Đồ họa</option>
-                          <option>Robotics</option>
-                          <option>Máy tính</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Môn học</label>
-                        <select id="monhoc" name="monhoc" class="form-control">
-                          <option value="default">Chọn</option>
-                          <option>C++</option>
-                          <option>Python</option>
-                          <option>Canva</option>
-                          <option>Lego</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Khóa học</label>
-                        <select id="khoahoc" name="khoahoc" class="form-control">
-                          <option value="default">Chọn</option>
-                          <option>Khóa 1</option>
-                          <option>Khóa 2</option>
-                          <option>Khóa 3</option>
-                          <option>Khóa 4</option>
-                          <option>Khóa 5</option>
-                          <option>Khóa 6</option>
-                          <option>Khóa 7</option>
-                          <option>Khóa 8</option>
-                          <option>Khóa 9</option>
-                          <option>Khóa 10</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Ngày khai giảng</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                          <input type="text" name="ngaykhaigiang" class="form-control datetimepicker-input"
-                            data-target="#reservationdate" />
-                          <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                          </div>
+                        <label for="thoigian">Thời gian</label>
+                        <div class="d-flex align-items-center">
+                          <i>Từ</i>
+                          <input type="text" name="thoigianstart" id="thoigianstart" class="bs-timepicker form-control mx-2">
+                          <i>Đến</i>
+                          <input type="text" name="thoigianend" id="thoigianend" class="bs-timepicker form-control ml-2">
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label>Ca học</label>
-                        <select id="cahoc" name="cahoc" class="form-control">
-                          <option value="default">Chọn</option>
-                          <option>Ca 1: 8h30 - 10h30</option>
-                          <option>Ca 2: 14h30 - 16h30</option>
-                          <option>Ca 3: 17h00 - 19h00</option>
-                          <option>Ca 4: 19h30 - 21h30</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Giáo viên</label>
-                        <select id="giaovien" name="giaovien" class="select2bs4" multiple="multiple"
-                          data-placeholder="Chọn giáo viên" style="width: 100%;">
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Học sinh</label>
-                        <select id="hocsinh" name="hocsinh" class="duallistbox" multiple="multiple">
-                          <option>Phan Thành Toại, 12/06/2018, 09843537666</option>
-                          <option>Phan Thành Toại, 12/06/2018, 09843537555</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                        </select>
-                      </div>
-                      
+
                     </div>
                     <!-- /.card-body -->
                   </div>
@@ -465,7 +376,7 @@
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Bảng danh sách lớp học</h3>
+              <h3 class="card-title">Bảng danh sách ca học</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -473,77 +384,54 @@
                 <thead>
                   <tr>
                     <th>STT</th>
-                    <th>Tên lớp học</th>
-                    <th>Môn học</th>
-                    <th>Khóa học</th>
-                    <th>Ngày khai giảng</th>
-                    <th>Giáo viên</th>
-                    <th>SLHS</th>
-                    <th>Trạng thái</th>
+                    <th>Ca học</th>
+                    <th>Thời gian</th>
+                    <th>Ngày tạo</th>
+                    <th>Người tạo</th>
                     <th>Hành động</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>Lập trình C++ cơ bản</td>
-                    <td>C++</td>
-                    <td>Khóa 1</td>
-                    <td>Thứ 6, 17/09/2022, 17h - 19h</td>
+                    <td>Ca 1</td>
+                    <td>8h30 - 10h30</td>
+                    <td>22:10:43 17/09/2022</td>
                     <td>Phan Thành Toại</td>
-                    <td>10</td>
-                    <td>Đang xẩy ra</td>
                     <td>
-                      <a href="./chitietlophoc.html" target="_blank" class=""><i class="fas fa-list-alt p-1 mr-2"
-                          title="Chi tiết"></i></a>
                       <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
                       <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Lập trình Python nâng cao</td>
-                    <td>Python</td>
-                    <td>Khóa 2</td>
-                    <td>Thứ 4, 17/09/2022, 14h30 - 16h30</td>
+                    <td>Ca 2</td>
+                    <td>14h30 - 16h30</td>
+                    <td>22:10:43 17/09/2022</td>
                     <td>Phan Thành Toại</td>
-                    <td>7</td>
-                    <td>Đang xẩy ra</td>
                     <td>
-                      <a href="./chitietlophoc.html" target="_blank"><i class="fas fa-list-alt p-1 mr-2"
-                          title="Chi tiết"></i></a>
                       <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
                       <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>Lập trình ứng dụng di động</td>
-                    <td>App Inventor</td>
-                    <td>Khóa 1</td>
-                    <td>Thứ 2, 17/09/2022, 17h - 19h</td>
+                    <td>Ca 3</td>
+                    <td>17h00 - 19h00</td>
+                    <td>22:10:43 17/09/2022</td>
                     <td>Phan Thành Toại</td>
-                    <td>8</td>
-                    <td>Sắp diễn ra</td>
                     <td>
-                      <a href="./chitietlophoc.html" target="_blank"><i class="fas fa-list-alt p-1 mr-2"
-                          title="Chi tiết"></i></a>
                       <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
                       <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>4</td>
-                    <td>Lập trình giao diện website</td>
-                    <td>Fontend</td>
-                    <td>Khóa 7</td>
-                    <td>Thứ 2, 17/09/2022, 17h - 19h</td>
+                    <td>Ca 4</td>
+                    <td>19h30 - 21h30</td>
+                    <td>22:10:43 17/09/2022</td>
                     <td>Phan Thành Toại</td>
-                    <td>5</td>
-                    <td>Hoàn thành</td>
                     <td>
-                      <a href="./chitietlophoc.html" target="_blank"><i class="fas fa-list-alt p-1 mr-2"
-                          title="Chi tiết"></i></a>
                       <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
                       <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
                     </td>
@@ -612,16 +500,8 @@
   <!-- jquery-validation -->
   <script src="../../../../plugins/jquery-validation/jquery.validate.min.js"></script>
   <script src="../../../../plugins/jquery-validation/additional-methods.min.js"></script>
-  <!-- Select2 -->
-  <script src="../../../../plugins/select2/js/select2.full.min.js"></script>
-  <!-- date picker  -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"
-    integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA=="
-    crossorigin="anonymous"></script>
-  <!-- Bootstrap4 Duallistbox -->
-  <script src="../../../../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+  <!-- thời gian  -->
+  <script src="../../../../plugins/timeselect/timepicker.min.js"></script>
   <!-- Page specific script -->
   <script>
     $(function () {
@@ -629,7 +509,7 @@
         "responsive": true,
         "lengthChange": false,
         "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({
         "paging": true,
@@ -647,62 +527,27 @@
         }
       });
 
-      // add the rule here
-      $.validator.addMethod("valueNotEquals", function (value, element, arg) {
-        return arg !== value;
-      }, "Value must not equal arg.");
-
       $('#quickForm').validate({
         rules: {
-          tenlophoc: {
-            required: true,
-          },
-          danhmuc: {
-            valueNotEquals: 'default',
-          },
-          monhoc: {
-            valueNotEquals: 'default',
-          },
-          khoahoc: {
-            valueNotEquals: 'default',
-          },
-          ngaykhaigiang: {
-            required: true,
-          },
           cahoc: {
-            valueNotEquals: 'default',
-          },
-          giaovien: {
             required: true,
           },
-          hocsinh: {
-            valueNotEquals: 'default',
+          thoigianstart: {
+            required: true,
+          },
+          thoigianend: {
+            required: true,
           },
         },
         messages: {
-          tenlophoc: {
-            required: "Vui lòng không bỏ trống",
-          },
-          danhmuc: {
-            valueNotEquals: "Vui lòng không bỏ trống",
-          },
-          monhoc: {
-            valueNotEquals: "Vui lòng không bỏ trống",
-          },
-          khoahoc: {
-            valueNotEquals: "Vui lòng không bỏ trống",
-          },
-          ngaykhaigiang: {
-            required: "Vui lòng không bỏ trống",
-          },
           cahoc: {
-            valueNotEquals: "Vui lòng không bỏ trống",
-          },
-          giaovien: {
             required: "Vui lòng không bỏ trống",
           },
-          hocsinh: {
-            valueNotEquals: "Vui lòng không bỏ trống",
+          thoigianstart: {
+            required: "Vui lòng không bỏ trống",
+          },
+          thoigianend: {
+            required: "<span style='margin-left: 235px'>Vui lòng không bỏ trống </span>",
           },
         },
         errorElement: 'span',
@@ -717,19 +562,11 @@
           $(element).removeClass('is-invalid');
         }
       });
+
+    
+      $('.bs-timepicker').timepicker();
     });
 
-    $('.select2bs4').select2({
-      theme: 'bootstrap4',
-    });
-
-    //Date picker
-    $('#reservationdate').datetimepicker({
-      format: 'L'
-    });
-
-    //Bootstrap Duallistbox
-    $('.duallistbox').bootstrapDualListbox()
 
   </script>
 </body>

@@ -33,6 +33,8 @@
     crossorigin="anonymous" />
   <!-- Bootstrap4 Duallistbox -->
   <link rel="stylesheet" href="../../../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="../../../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Thêm css -->
   <link rel="stylesheet" href="../../../../dist/css/new/style.css">
 </head>
@@ -312,11 +314,11 @@
       <section class="content mt-5">
         <div class="container-fluid">
 
-          <div class="d-flex justify-content-end">
+          <!-- <div class="d-flex justify-content-end">
             <button type="button" class="btn btn-primary mt-3 mb-2" data-toggle="modal" data-target="#modal-lg">
               Thêm mới
             </button>
-          </div>
+          </div> -->
 
           <!-- Model form  -->
           <div class="modal fade" id="modal-lg">
@@ -333,104 +335,20 @@
                     <!-- form start -->
                     <div class="card-body">
                       <div class="form-group">
-                        <label for="tenlophoc">Tên lớp học</label>
-                        <input type="text" name="tenlophoc" class="form-control" id="tenlophoc"
-                          placeholder="Ví dụ: Lập trình C++ cơ bản">
-                      </div>
-                      <div class="form-group">
-                        <label>Danh mục</label>
-                        <select id="danhmuc" name="danhmuc" class="form-control">
+                        <label>Thời gian dời lịch học</label>
+                        <select id="thoigiandoilich" name="thoigiandoilich" class="form-control">
                           <option value="default">Chọn</option>
-                          <option>Lập trình</option>
-                          <option>Đồ họa</option>
-                          <option>Robotics</option>
-                          <option>Máy tính</option>
+                          <option>1 tuần</option>
+                          <option>2 tuần</option>
                         </select>
                       </div>
-                      <div class="form-group">
-                        <label>Môn học</label>
-                        <select id="monhoc" name="monhoc" class="form-control">
-                          <option value="default">Chọn</option>
-                          <option>C++</option>
-                          <option>Python</option>
-                          <option>Canva</option>
-                          <option>Lego</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Khóa học</label>
-                        <select id="khoahoc" name="khoahoc" class="form-control">
-                          <option value="default">Chọn</option>
-                          <option>Khóa 1</option>
-                          <option>Khóa 2</option>
-                          <option>Khóa 3</option>
-                          <option>Khóa 4</option>
-                          <option>Khóa 5</option>
-                          <option>Khóa 6</option>
-                          <option>Khóa 7</option>
-                          <option>Khóa 8</option>
-                          <option>Khóa 9</option>
-                          <option>Khóa 10</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Ngày khai giảng</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                          <input type="text" name="ngaykhaigiang" class="form-control datetimepicker-input"
-                            data-target="#reservationdate" />
-                          <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label>Ca học</label>
-                        <select id="cahoc" name="cahoc" class="form-control">
-                          <option value="default">Chọn</option>
-                          <option>Ca 1: 8h30 - 10h30</option>
-                          <option>Ca 2: 14h30 - 16h30</option>
-                          <option>Ca 3: 17h00 - 19h00</option>
-                          <option>Ca 4: 19h30 - 21h30</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Giáo viên</label>
-                        <select id="giaovien" name="giaovien" class="select2bs4" multiple="multiple"
-                          data-placeholder="Chọn giáo viên" style="width: 100%;">
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                          <option>Phan Thành Toại</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>Học sinh</label>
-                        <select id="hocsinh" name="hocsinh" class="duallistbox" multiple="multiple">
-                          <option>Phan Thành Toại, 12/06/2018, 09843537666</option>
-                          <option>Phan Thành Toại, 12/06/2018, 09843537555</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                          <option>Nguyễn Lê Anh Quân, 12/06/2018, 09843537222</option>
-                        </select>
-                      </div>
-                      
+
                     </div>
                     <!-- /.card-body -->
                   </div>
                   <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <button type="submit" class="btn btn-primary" id="submitForm">Lưu</button>
                   </div>
                 </form>
               </div>
@@ -464,93 +382,83 @@
           </div>
 
           <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Bảng danh sách lớp học</h3>
+            <div class="card-header d-flex align-items-center">
+              <h3 class="card-title mr-3">Bảng danh sách lớp học</h3>
+              <form action="">
+                <select name="" id="" class="form-control">
+                  <option value="">Hôm nay</option>
+                  <option value="">Ngày mai</option>
+                </select>
+              </form>
             </div>
+
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th>STT</th>
-                    <th>Tên lớp học</th>
-                    <th>Môn học</th>
-                    <th>Khóa học</th>
-                    <th>Ngày khai giảng</th>
-                    <th>Giáo viên</th>
-                    <th>SLHS</th>
-                    <th>Trạng thái</th>
-                    <th>Hành động</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Lập trình C++ cơ bản</td>
-                    <td>C++</td>
-                    <td>Khóa 1</td>
-                    <td>Thứ 6, 17/09/2022, 17h - 19h</td>
-                    <td>Phan Thành Toại</td>
-                    <td>10</td>
-                    <td>Đang xẩy ra</td>
-                    <td>
-                      <a href="./chitietlophoc.html" target="_blank" class=""><i class="fas fa-list-alt p-1 mr-2"
-                          title="Chi tiết"></i></a>
-                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
-                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Lập trình Python nâng cao</td>
-                    <td>Python</td>
-                    <td>Khóa 2</td>
-                    <td>Thứ 4, 17/09/2022, 14h30 - 16h30</td>
-                    <td>Phan Thành Toại</td>
-                    <td>7</td>
-                    <td>Đang xẩy ra</td>
-                    <td>
-                      <a href="./chitietlophoc.html" target="_blank"><i class="fas fa-list-alt p-1 mr-2"
-                          title="Chi tiết"></i></a>
-                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
-                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Lập trình ứng dụng di động</td>
-                    <td>App Inventor</td>
-                    <td>Khóa 1</td>
-                    <td>Thứ 2, 17/09/2022, 17h - 19h</td>
-                    <td>Phan Thành Toại</td>
-                    <td>8</td>
-                    <td>Sắp diễn ra</td>
-                    <td>
-                      <a href="./chitietlophoc.html" target="_blank"><i class="fas fa-list-alt p-1 mr-2"
-                          title="Chi tiết"></i></a>
-                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
-                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Lập trình giao diện website</td>
-                    <td>Fontend</td>
-                    <td>Khóa 7</td>
-                    <td>Thứ 2, 17/09/2022, 17h - 19h</td>
-                    <td>Phan Thành Toại</td>
-                    <td>5</td>
-                    <td>Hoàn thành</td>
-                    <td>
-                      <a href="./chitietlophoc.html" target="_blank"><i class="fas fa-list-alt p-1 mr-2"
-                          title="Chi tiết"></i></a>
-                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
-                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
-                    </td>
-                  </tr>
+              <form action="">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th><input onClick="toggle(this)" type="checkbox" name="" id=""></th>
+                      <th>STT</th>
+                      <th>Tên lớp học</th>
+                      <th>Khóa học</th>
+                      <th>Lịch học</th>
+                      <th>Buổi học</th>
+                      <th>Giáo viên</th>
+                      <th>Trạng thái</th>
+                      <th><i onClick="chuyenlichAll(this)" id="shareAll" data-toggle="modal" data-target="#modal-lg"
+                          class="fas fa-regular fa-share-square p-1" title="Dời lịch học"></i>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="lop" id=""></td>
+                      <td>1</td>
+                      <td>Lập trình C++ cơ bản</td>
+                      <td>Khóa 1</td>
+                      <td>Thứ 6, 24/09/2022, 17h - 19h</td>
+                      <td>10</td>
+                      <td>Phan Thành Toại</td>
+                      <td>Đang xẩy ra</td>
+                      <td>
+                        <i data-toggle="modal" data-target="#modal-lg" class="fas fa-regular fa-share p-1"
+                          title="Dời lịch học"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="lop" id=""></td>
+                      <td>1</td>
+                      <td>Lập trình C++ cơ bản</td>
+                      <td>Khóa 1</td>
+                      <td>Thứ 6, 24/09/2022, 17h - 19h</td>
+                      <td>10</td>
+                      <td>Phan Thành Toại</td>
+                      <td>Đang xẩy ra</td>
+                      <td>
+                        <i data-toggle="modal" data-target="#modal-lg" class="fas fa-regular fa-share p-1"
+                          title="Dời lịch học"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="lop" id=""></td>
+                      <td>1</td>
+                      <td>Lập trình C++ cơ bản</td>
+                      <td>Khóa 1</td>
+                      <td>Thứ 6, 24/09/2022, 17h - 19h</td>
+                      <td>10</td>
+                      <td>Phan Thành Toại</td>
+                      <td>Đang xẩy ra</td>
+                      <td>
+                        <i id="test" data-toggle="modal" data-target="#modal-lg" class="fas fa-regular fa-share p-1"
+                          title="Dời lịch học"></i>
+                      </td>
+                    </tr>
 
-                </tbody>
-              </table>
+
+                  </tbody>
+                </table>
+              </form>
             </div>
             <!-- /.card-body -->
           </div>
@@ -622,6 +530,8 @@
     crossorigin="anonymous"></script>
   <!-- Bootstrap4 Duallistbox -->
   <script src="../../../../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="../../../../plugins/sweetalert2/sweetalert2.min.js"></script>
   <!-- Page specific script -->
   <script>
     $(function () {
@@ -643,7 +553,7 @@
 
       $.validator.setDefaults({
         submitHandler: function () {
-          alert("Form successful submitted!");
+          // ko có chi
         }
       });
 
@@ -654,54 +564,12 @@
 
       $('#quickForm').validate({
         rules: {
-          tenlophoc: {
-            required: true,
-          },
-          danhmuc: {
-            valueNotEquals: 'default',
-          },
-          monhoc: {
-            valueNotEquals: 'default',
-          },
-          khoahoc: {
-            valueNotEquals: 'default',
-          },
-          ngaykhaigiang: {
-            required: true,
-          },
-          cahoc: {
-            valueNotEquals: 'default',
-          },
-          giaovien: {
-            required: true,
-          },
-          hocsinh: {
+          thoigiandoilich: {
             valueNotEquals: 'default',
           },
         },
         messages: {
-          tenlophoc: {
-            required: "Vui lòng không bỏ trống",
-          },
-          danhmuc: {
-            valueNotEquals: "Vui lòng không bỏ trống",
-          },
-          monhoc: {
-            valueNotEquals: "Vui lòng không bỏ trống",
-          },
-          khoahoc: {
-            valueNotEquals: "Vui lòng không bỏ trống",
-          },
-          ngaykhaigiang: {
-            required: "Vui lòng không bỏ trống",
-          },
-          cahoc: {
-            valueNotEquals: "Vui lòng không bỏ trống",
-          },
-          giaovien: {
-            required: "Vui lòng không bỏ trống",
-          },
-          hocsinh: {
+          thoigiandoilich: {
             valueNotEquals: "Vui lòng không bỏ trống",
           },
         },
@@ -730,6 +598,75 @@
 
     //Bootstrap Duallistbox
     $('.duallistbox').bootstrapDualListbox()
+
+    // checkbox all 
+    function toggle(source) {
+      checkboxes = document.getElementsByName('lop');
+      for (var i = 0, n = checkboxes.length; i < n; i++) {
+        checkboxes[i].checked = source.checked;
+      }
+    }
+
+    // toast thông báo
+    var Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
+
+    function thongbaosuccess() {
+      Toast.fire({
+        icon: 'success',
+        title: "<h6 style='margin:7px 0px 0px 20px'>Thành công</h6>"
+      })
+    }
+
+    function thongbaowarning() {
+      Toast.fire({
+        icon: 'warning',
+        title: "<h6 style='margin: 7px 0px 0px 20px'>Bạn cần chọn ít nhất 1 bản ghi.</h6>"
+      })
+    }
+
+    // chuyển lịch tất cả 
+    function chuyenlichAll(check) {
+      checkboxes = document.getElementsByName('lop');
+      var dem = 0;
+      for (var i = 0, n = checkboxes.length; i < n; i++) {
+        if (checkboxes[i].checked == true) {
+          dem++;
+        }
+        console.log(dem)
+      }
+
+      var shareAll = document.getElementById('shareAll')
+      if (dem == 0) {
+        shareAll.removeAttribute('data-toggle')
+        thongbaowarning()
+
+      } else {
+        shareAll.setAttribute('data-toggle', 'modal')
+      }
+    }
+
+    var submitForm = document.getElementById('submitForm')
+    $('#thoigiandoilich').on('click', function () {
+      if (this.value != 'default') {
+        submitForm.setAttribute('data-dismiss', 'modal')
+        console.log(submitForm)
+      } else {
+        submitForm.removeAttribute('data-dismiss')
+      }
+    })
+
+    var thoigiandoilich = document.getElementById('thoigiandoilich')
+    $('#submitForm').on('click', function () {
+      console.log(this)
+      if (thoigiandoilich.value != 'default') {
+        thongbaosuccess()
+      }
+    })
 
   </script>
 </body>
