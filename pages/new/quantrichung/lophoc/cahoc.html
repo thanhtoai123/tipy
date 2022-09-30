@@ -21,11 +21,8 @@
   <link rel="stylesheet" href="../../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="../../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="../../../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="../../../../plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="../../../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-  <!-- iCheck for checkboxes and radio inputs -->
-  <link rel="stylesheet" href="../../../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- thời gian  -->
+  <link href="../../../../plugins/timeselect/timepicker.min.css" rel="stylesheet" />
   <!-- Thêm css -->
   <link rel="stylesheet" href="../../../../dist/css/new/style.css">
 </head>
@@ -305,11 +302,11 @@
       <section class="content mt-5">
         <div class="container-fluid">
 
-          <!-- <div class="d-flex justify-content-end">
+          <div class="d-flex justify-content-end">
             <button type="button" class="btn btn-primary mt-3 mb-2" data-toggle="modal" data-target="#modal-lg">
               Thêm mới
             </button>
-          </div> -->
+          </div>
 
           <!-- Model form  -->
           <div class="modal fade" id="modal-lg">
@@ -324,109 +321,22 @@
                 <form id="quickForm">
                   <div class="modal-body">
                     <!-- form start -->
-                    <table id="example2" class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th scope="col">STT</th>
-                          <th scope="col">Họ và tên</th>
-                          <th scope="col">Điểm danh</th>
-                          <th scope="col">Điểm số</th>
-                          <th scope="col">Đánh giá</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>1</th>
-                          <td>Phan Nguyễn Thành Toại</td>
-                          <td style="padding: 6px;" class="d-flex align-items-center justify-content-between">
-                            <div class="icheck-success d-inline">
-                              <input type="radio" name="diemdanh" id="radioSuccess1" checked>
-                              <label for="radioSuccess1" class="font-weight-light">
-                                Có
-                              </label>
-                            </div>
-                            <div class="icheck-warning d-inline">
-                              <input type="radio" name="diemdanh" id="radioWarning1">
-                              <label for="radioWarning1" class="font-weight-light">
-                                Muộn
-                              </label>
-                            </div>
-                            <div class="icheck-danger d-inline">
-                              <input type="radio" name="diemdanh" id="radioDanger1">
-                              <label for="radioDanger1" class="font-weight-light">
-                                Vắng
-                              </label>
-                            </div>
-                          </td>
-                          <td style="padding: 5px;">
-                            <input type="number" name="" class="form-control" id="" min="0" max="10">
-                          </td>
-                          <td style="padding: 5px;">
-                            <textarea name="" id="" cols="20" rows="1" class="form-control"></textarea>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>2</th>
-                          <td>Phan Nguyễn Thành Toại</td>
-                          <td style="padding: 6px;" class="d-flex align-items-center justify-content-between">
-                            <div class="icheck-success d-inline">
-                              <input type="radio" name="diemdanh1" id="radioSuccess2" checked>
-                              <label for="radioSuccess2" class="font-weight-light">
-                                Có
-                              </label>
-                            </div>
-                            <div class="icheck-warning d-inline">
-                              <input type="radio" name="diemdanh1" id="radioWarning2">
-                              <label for="radioWarning2" class="font-weight-light">
-                                Muộn
-                              </label>
-                            </div>
-                            <div class="icheck-danger d-inline">
-                              <input type="radio" name="diemdanh1" id="radioDanger2">
-                              <label for="radioDanger2" class="font-weight-light">
-                                Vắng
-                              </label>
-                            </div>
-                          </td>
-                          <td style="padding: 5px;">
-                            <input type="number" name="" class="form-control" id="" min="0" max="10">
-                          </td>
-                          <td style="padding: 5px;">
-                            <textarea name="" id="" cols="20" rows="1" class="form-control"></textarea>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>3</th>
-                          <td>Phan Nguyễn Thành Toại</td>
-                          <td style="padding: 6px;" class="d-flex align-items-center justify-content-between">
-                            <div class="icheck-success d-inline">
-                              <input type="radio" name="diemdanh2" id="radioSuccess3" checked>
-                              <label for="radioSuccess3" class="font-weight-light">
-                                Có
-                              </label>
-                            </div>
-                            <div class="icheck-warning d-inline">
-                              <input type="radio" name="diemdanh2" id="radioWarning3">
-                              <label for="radioWarning3" class="font-weight-light">
-                                Muộn
-                              </label>
-                            </div>
-                            <div class="icheck-danger d-inline">
-                              <input type="radio" name="diemdanh2" id="radioDanger3">
-                              <label for="radioDanger3" class="font-weight-light">
-                                Vắng
-                              </label>
-                            </div>
-                          </td>
-                          <td style="padding: 5px;">
-                            <input type="number" name="" class="form-control" id="" min="0" max="10">
-                          </td>
-                          <td style="padding: 5px;">
-                            <textarea name="" id="" cols="20" rows="1" class="form-control"></textarea>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label for="cahoc">Ca học</label>
+                        <input type="text" name="cahoc" class="form-control" id="cahoc" placeholder="Ví dụ: Ca 1...">
+                      </div>
+                      <div class="form-group">
+                        <label for="thoigian">Thời gian</label>
+                        <div class="d-flex align-items-center">
+                          <i>Từ</i>
+                          <input type="text" name="thoigianstart" id="thoigianstart" class="bs-timepicker form-control mx-2">
+                          <i>Đến</i>
+                          <input type="text" name="thoigianend" id="thoigianend" class="bs-timepicker form-control ml-2">
+                        </div>
+                      </div>
+
+                    </div>
                     <!-- /.card-body -->
                   </div>
                   <div class="modal-footer justify-content-between">
@@ -466,124 +376,67 @@
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Thông tin chi tiết lớp học</h3>
+              <h3 class="card-title">Bảng danh sách ca học</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-
-              <h2 class="text-uppercase text-center">Python nâng cao 1</h2>
-
-                <div class="d-flex mt-3 mb-2" style="justify-content: space-evenly;">
-                    <span><b>Địa điểm:&nbsp;</b>Cơ sở 1 Lê Duẩn, Tp Vinh, Nghệ An</span>
-                    <span><b>Ca học:&nbsp;</b>Ca 3: 17h - 19h</span>
-                    <span><b>Phòng học:&nbsp;</b>Phòng 5</span>
-                    <span><b>Khai giảng:&nbsp;</b>Thứ 4, 1/10/2022</span>
-                  </div>
-                  <div class="d-flex mb-5" style="justify-content: space-between;">
-                    <span><b>Giáo viên:&nbsp;</b>Phan Thành Toại & Phan Thành Toại</span>
-                    <span><b>Sỉ số:&nbsp;</b>10 học sinh</span>
-                    <span><b>Số buổi:&nbsp;</b>10 / 20</span>
-                    <span><b>Kết thúc:&nbsp;</b>Thứ 4, 1/10/2022</span>
-                    <span><b>Trạng thái:&nbsp;</b>Đang xảy ra</span>
-                </div>
-
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                   <tr>
                     <th>STT</th>
-                    <th>Học sinh</th>
-                    <th>Ngày sinh</th>
-                    <th>Giới tính</th>
-                    <th>Trường</th>
-                    <th>Số điện thoại</th>
-                    <th>Phụ huynh</th>
+                    <th>Ca học</th>
+                    <th>Thời gian</th>
+                    <th>Ngày tạo</th>
+                    <th>Người tạo</th>
+                    <th>Hành động</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
+                    <td>Ca 1</td>
+                    <td>8h30 - 10h30</td>
+                    <td>22:10:43 17/09/2022</td>
                     <td>Phan Thành Toại</td>
-                    <td>17/09/2012</td>
-                    <td>Nam</td>
-                    <td>Trường THPT Huỳnh Thúc Kháng</td>
-                    <td>0843537333</td>
-                    <td>Phan Nghĩa Quân</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Phan Thành Toại</td>
-                    <td>17/09/2012</td>
-                    <td>Nam</td>
-                    <td>Trường THPT Huỳnh Thúc Kháng</td>
-                    <td>0843537333</td>
-                    <td>Phan Nghĩa Quân</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Phan Thành Toại</td>
-                    <td>17/09/2012</td>
-                    <td>Nam</td>
-                    <td>Trường THPT Huỳnh Thúc Kháng</td>
-                    <td>0843537333</td>
-                    <td>Phan Nghĩa Quân</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Phan Thành Toại</td>
-                    <td>17/09/2012</td>
-                    <td>Nam</td>
-                    <td>Trường THPT Huỳnh Thúc Kháng</td>
-                    <td>0843537333</td>
-                    <td>Phan Nghĩa Quân</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Phan Thành Toại</td>
-                    <td>17/09/2012</td>
-                    <td>Nam</td>
-                    <td>Trường THPT Huỳnh Thúc Kháng</td>
-                    <td>0843537333</td>
-                    <td>Phan Nghĩa Quân</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Phan Thành Toại</td>
-                    <td>17/09/2012</td>
-                    <td>Nam</td>
-                    <td>Trường THPT Huỳnh Thúc Kháng</td>
-                    <td>0843537333</td>
-                    <td>Phan Nghĩa Quân</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Phan Thành Toại</td>
-                    <td>17/09/2012</td>
-                    <td>Nam</td>
-                    <td>Trường THPT Huỳnh Thúc Kháng</td>
-                    <td>0843537333</td>
-                    <td>Phan Nghĩa Quân</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Phan Thành Toại</td>
-                    <td>17/09/2012</td>
-                    <td>Nam</td>
-                    <td>Trường THPT Huỳnh Thúc Kháng</td>
-                    <td>0843537333</td>
-                    <td>Phan Nghĩa Quân</td>
-                  </tr>
-                  
-                  <!-- <tr>
-                    <td>Lập trình C++ cơ bản</td>
-                    <td>4</td>
-                    <td>Thứ 2, 17/09/2022, 17h - 19h</td>
-                    <td>Phan Thành Toại</td>
-                    <td>Sắp diễn ra</td>
                     <td>
-                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-solid fa-clipboard-list p-1 ml-2"
-                        title="Điểm danh"></i>
+                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
+                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
                     </td>
-                  </tr> -->
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Ca 2</td>
+                    <td>14h30 - 16h30</td>
+                    <td>22:10:43 17/09/2022</td>
+                    <td>Phan Thành Toại</td>
+                    <td>
+                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
+                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Ca 3</td>
+                    <td>17h00 - 19h00</td>
+                    <td>22:10:43 17/09/2022</td>
+                    <td>Phan Thành Toại</td>
+                    <td>
+                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
+                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Ca 4</td>
+                    <td>19h30 - 21h30</td>
+                    <td>22:10:43 17/09/2022</td>
+                    <td>Phan Thành Toại</td>
+                    <td>
+                      <i data-toggle="modal" data-target="#modal-lg" class="fas fa-pencil-alt p-1 mr-2" title="Sửa"></i>
+                      <i data-toggle="modal" data-target="#modal-warning" class="fas fa-trash-alt p-1" title="Xóa"></i>
+                    </td>
+                  </tr>
+
                 </tbody>
               </table>
             </div>
@@ -647,8 +500,8 @@
   <!-- jquery-validation -->
   <script src="../../../../plugins/jquery-validation/jquery.validate.min.js"></script>
   <script src="../../../../plugins/jquery-validation/additional-methods.min.js"></script>
-  <!-- Select2 -->
-  <script src="../../../../plugins/select2/js/select2.full.min.js"></script>
+  <!-- thời gian  -->
+  <script src="../../../../plugins/timeselect/timepicker.min.js"></script>
   <!-- Page specific script -->
   <script>
     $(function () {
@@ -656,16 +509,14 @@
         "responsive": true,
         "lengthChange": false,
         "autoWidth": false,
-        // "lengthChange": true,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
-        "lengthMenu": [12]
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({
-        "paging": false,
+        "paging": true,
         "lengthChange": false,
         "searching": false,
-        "ordering": false,
-        "info": false,
+        "ordering": true,
+        "info": true,
         "autoWidth": false,
         "responsive": true,
       });
@@ -678,25 +529,25 @@
 
       $('#quickForm').validate({
         rules: {
-          monhoc: {
+          cahoc: {
             required: true,
           },
-          danhmuc: {
+          thoigianstart: {
             required: true,
           },
-          mota: {
+          thoigianend: {
             required: true,
           },
         },
         messages: {
-          monhoc: {
+          cahoc: {
             required: "Vui lòng không bỏ trống",
           },
-          danhmuc: {
+          thoigianstart: {
             required: "Vui lòng không bỏ trống",
           },
-          mota: {
-            required: "Vui lòng không bỏ trống",
+          thoigianend: {
+            required: "<span style='margin-left: 235px'>Vui lòng không bỏ trống </span>",
           },
         },
         errorElement: 'span',
@@ -711,11 +562,11 @@
           $(element).removeClass('is-invalid');
         }
       });
+
+    
+      $('.bs-timepicker').timepicker();
     });
 
-    $('.select2bs4').select2({
-      theme: 'bootstrap4',
-    });
 
   </script>
 </body>
