@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIPY</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <!-- Google Font: Pacifico -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- fontawesome6  -->
+  <link rel="stylesheet" href="./plugins/fontawesome6.0/css/all.min.css">
+
+  <!-- aos css  -->
+  <link rel="stylesheet" href="./plugins/aos-master/dist/aos.css">
+
+  <!-- simplelightbox  -->
+  <link rel="stylesheet" href="./plugins/simplelightbox-master/dist/simple-lightbox.min.css">
+
+  <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css">
+  <!-- thêm css  -->
+  <link rel="stylesheet" href="./dist/css/new/trangchu.css">
+</head>
+
+<body>
+
+  <div id="loginForm">
+    <img src="./dist/img/logotipyred.jpg" alt="">
+
+    <h1>Quên mật khẩu</h1>
+
+    <form action="" method="get">
+      <label for="username">Email</label>
+      <input type="text" name="email" class="form-control" id="email">
+      
+      <p style="font-size: 14px;" class="text-danger">Chúng tôi đã gửi một tin nhắn tới Email của bạn vừa nhập. Kiểm tra hộp thư để nhận mã thay đổi.</p>
+
+      <input class="btn__submit" type="submit" value="Gửi đi">
+
+      <a href="./dangnhap.html">Đăng nhập</a>
+    </form>
+  </div>
+
+
+
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      font-family: 'Pacifico', sans-serif;
+    }
+
+    img {
+      width: 120px;
+    }
+
+    #loginForm {
+      width: 450px;
+      height: auto;
+      background-color: white;
+      margin: auto;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      border-radius: 15px;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label,
+    input {
+      margin-bottom: 12px;
+    }
+
+
+    .btn__submit {
+      margin-top: 25px;
+      background-color: #0d6efd;
+      color: white;
+      border: 1px solid #0d6efd;
+      padding: 12px;
+    }
+
+    #username,
+    #password {
+      height: 50px;
+
+    }
+
+
+    #hiden__pass {
+      position: absolute;
+      top: 19px;
+      right: 10px;
+      font-size: 14px;
+    }
+
+  </style>
+
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- aos js  -->
+  <script src="./plugins/aos-master/dist/aos.js"></script>
+  <!-- simplelightbox  -->
+  <script src="./plugins/simplelightbox-master/dist/simple-lightbox.min.js"></script>
+  <!-- thêm js trang chủ  -->
+  <script src="./dist/js/new/trangchu.js"></script>
+
+
+
+  <script>
+    $(document).ready(function() {
+        $('#hiden__pass').click(function() {
+            $(this).toggleClass("fa-eye")
+            $(this).toggleClass("fa-eye-slash")
+
+            var passEl = document.getElementById('hiden__pass')
+            var passAttr = passEl.getAttribute('class')
+    
+            if(passAttr == "fas fa-thin fa-eye") {
+                $("#password").attr("type", "password")
+            } else {
+                $("#password").attr("type", "text")
+            }
+        })
+
+        
+        
+    })
+    
+    function pass() {
+        var input__pass = document.getElementById("password")
+        var input__passVal = input__pass.value
+
+        
+        if(input__passVal.length > 1) {
+            $("#hiden__pass").removeClass('d-none')
+        } else {
+            $("#hiden__pass").addClass('d-none')
+        }
+    }
+
+
+    </script>
+
+</body>
+
+</html>
